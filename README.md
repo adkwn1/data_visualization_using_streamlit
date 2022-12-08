@@ -26,7 +26,7 @@ The config.toml specifies the server address and port number to run the web app 
 
 streamlit run app.py
 
-Open a web browser and navigate to http://0.0.0.0:10000 to interact with the project application.
+Open a web browser and navigate to http://localhost:10000 to interact with the project application.
 
 # Python module requirments
 - pandas, re, streamlit, plotly.express
