@@ -22,7 +22,11 @@ To run the project in a local web browser, clone the repository ensuring the fil
 - app.py (top level)
 - .streamlit/config.toml
 
-The config.toml specifies the server address and port number to run the web app locally via streamlit.
+The config.toml specifies the server address and port number to run the web app locally via streamlit. In command prompt or terminal, navigate to the cloned directory and run the following command:
+
+streamlit run app.py
+
+Open a web browser and navigate to http://0.0.0.0:10000 to interact with the project application.
 
 # Python module requirments
 - pandas, re, streamlit, plotly.express
