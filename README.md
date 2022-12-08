@@ -14,7 +14,7 @@ In general, coffee scores are calculated based on a number of criteria such as a
 
 # Usage - Notebook
 
-The notebook is a standalone version of the project that performs the aforementioned exploratory data analysis and visualization on the coffee bean dataset. It can be downloaded on its own with the provided dataset. To run, copy the notebook and csv file into the same directory and open via preferred notebook IDE such as Jupyter.
+The notebook is a standalone version of the project that performs the aforementioned exploratory data analysis and visualization on the coffee bean dataset. Some analysis of the dataset is performed only in the notebook version, but the visualization, unlike the web app version, is on static inputs. It can be downloaded on its own with the provided dataset. To run, copy the notebook and csv file into the same directory and open via preferred notebook IDE such as Jupyter.
 
 # Usage - Local Browser
 
