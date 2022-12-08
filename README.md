@@ -11,3 +11,18 @@ In general, coffee scores are calculated based on a number of criteria such as a
 - 65-79: Commodity coffee.
 - 80-89: Specialty coffee
 - 90+: Presidential Award
+
+# Usage - Notebook
+
+The notebook is a standalone version of the project that performs the aforementioned exploratory data analysis and visualization on the coffee bean dataset. It can be downloaded on its own with the provided dataset. To run, copy the notebook and csv file into the same directory and open via preferred notebook IDE such as Jupyter.
+
+# Usage - Local Browser
+
+To run the project in a local web browser, clone the repository ensuring the files are in the correct directory structure:
+- app.py (top level)
+- .streamlit/config.toml
+
+The config.toml specifies the server address and port number to run the web app locally via streamlit.
+
+# Python module requirments
+- pandas, re, streamlit, plotly.express
