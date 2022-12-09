@@ -30,3 +30,9 @@ Open a web browser and navigate to http://localhost:10000 to interact with the p
 
 # Python module requirments
 - pandas, re, streamlit, plotly.express
+
+# Link to live Web App
+
+https://coffee-bean-rating.onrender.com/
+
+Note: Hosted via free service. Please allow time to wake by refreshing your requests to the page.
