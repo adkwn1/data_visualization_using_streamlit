@@ -5,21 +5,42 @@ import streamlit as st
 import re
 
 # reading in the data
-df_arabica = pd.read_csv('arabica_data_cleaned.csv')
+df_coffee = pd.read_csv('arabica_data_cleaned.csv')
 
-# dropping columns with data irrelevant to the project
-# also dropping row 1310 as the score are all zeroes
-cols_to_drop = [0, 2, 5, 6, 7, 9, 11, 16, 17, 33, 36, 37, 38, 39, 40, 41, 42, 43] 
-df_arabica.drop(df_arabica.columns[cols_to_drop], axis=1, inplace=True)
-df_arabica.drop(1310, inplace=True)
+# renaming columns to snake_case
+df_coffee.rename(str.lower, axis=1, inplace=True)
+df_coffee.columns = [re.sub('[\.\s]', '_', col) for col in df_coffee]
 
-# renaming the columns to snake_case and filling empty values with 'unknown'
-df_arabica.rename(str.lower, axis=1, inplace=True)
-df_arabica.columns = [re.sub('\.', '_', col) for col in df_arabica]
+# creating a filter of unused columns and scores > 0
+cols_to_filter = ['unnamed:_0',
+                'owner',
+                'lot_number',
+                'mill',
+                'ico_number',
+                'altitude',
+                'producer',
+                'grading_date',
+                'owner_1',
+                'expiration',
+                'certification_body',
+                'certification_address',
+                'certification_contact',
+                'unit_of_measurement',
+                'altitude_low_meters',
+                'altitude_high_meters',
+                'altitude_mean_meters']
+
+df_arabica = df_coffee.loc[df_coffee['total_cup_points'] > 0, ~df_coffee.columns.isin(cols_to_filter)]
+
+# replace missing values and drop any resultant duplicates
 df_arabica.fillna('unknown', inplace=True)
+df_arabica.drop_duplicates()
+
+# title info
+st.title('Arabica Bean Quality Viewer')
 
 # viewer for the resultant dataframe
-st.header('Data Viewer')
+st.header('Data Table')
 st.dataframe(df_arabica)
 
 # histogram of coffee rating by bean variety
