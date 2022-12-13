@@ -34,7 +34,6 @@ df_arabica = df_coffee.loc[df_coffee['total_cup_points'] > 0, ~df_coffee.columns
 
 # replace missing values and drop any resultant duplicates
 df_arabica.fillna('unknown', inplace=True)
-df_arabica.drop_duplicates()
 
 # title info
 st.title('Arabica Bean Quality Viewer')
