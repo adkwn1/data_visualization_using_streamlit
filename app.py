@@ -32,7 +32,8 @@ cols_to_filter = ['unnamed:_0',
 
 df_arabica = df_coffee.loc[df_coffee['total_cup_points'] > 0, ~df_coffee.columns.isin(cols_to_filter)]
 
-# replace missing values and drop any resultant duplicates
+# replace missing values
+# no duplicates to remove
 df_arabica.fillna('unknown', inplace=True)
 
 # title info
