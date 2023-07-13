@@ -8,7 +8,7 @@ This project notebook performs very rudimentary exploratory data analysis and vi
 The dataset contains just over 1,300 entries of Arabica bean varieties from all over the world. Most of the meta data that was beyond the scope of this project was removed during the data cleaning. Some of the farm meta data was preserved for informational purposes.
 
 In general, coffee scores are calculated based on a number of criteria such as aroma, acidity, and flavor. Additionally, points are deducted for defects in the coffee bean sample. Overall score is out of 100 and is assigned into one of the following ratings:
-- 65-79: Commodity coffee.
+- 65-79: Commodity coffee
 - 80-89: Specialty coffee
 - 90+: Presidential Award
 
@@ -24,7 +24,7 @@ To run the project in a local web browser, clone the repository ensuring the fil
 
 The config.toml specifies the server address and port number to run the web app locally via streamlit. In command prompt or terminal, navigate to the cloned directory and run the following command:
 
-streamlit run app.py
+<code>streamlit run app.py</code>
 
 Open a web browser and navigate to http://localhost:10000 to interact with the project application.
 
