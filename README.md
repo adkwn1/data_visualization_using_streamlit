@@ -28,7 +28,7 @@ The config.toml specifies the server address and port number to run the web app 
 
 Open a web browser and navigate to http://localhost:10000 to interact with the project application.
 
-## Required Libraries
+## Requirements
 - pandas
 - re
 - streamlit
